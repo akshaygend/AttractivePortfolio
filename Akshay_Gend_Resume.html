@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akshay Gend – Resume</title>
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── Base ── */
+    body {
+      font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+      font-size: 9pt;
+      color: #1a1a2e;
+      background: #f4f6fb;
+      line-height: 1.48;
+    }
+
+    /* ── Page wrapper ── */
+    .page {
+      max-width: 780px;
+      margin: 20px auto;
+      background: #ffffff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    /* ── Header / hero ── */
+    .header {
+      background: linear-gradient(135deg, #16213e 0%, #0f3460 60%, #1a5276 100%);
+      color: #ffffff;
+      padding: 16px 24px 13px;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .header-left { flex: 1; }
+    .header h1 {
+      font-size: 20pt;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 1px;
+    }
+    .header .tagline {
+      font-size: 9pt;
+      color: #a8c8f8;
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+
+    /* ── Photo circle ── */
+    .header-photo {
+      flex-shrink: 0;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.8);
+      overflow: hidden;
+      box-shadow: 0 0 0 3px rgba(255,255,255,0.15), 0 3px 10px rgba(0,0,0,0.4);
+    }
+    .header-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+    }
+    .photo-initials {
+      font-size: 18pt;
+      font-weight: 700;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 1px;
+      user-select: none;
+    }
+
+    /* ── Contact row ── */
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 4px 0;
+      font-size: 8.5pt;
+      color: #c8dcf8;
+    }
+    .contact-row .c-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding-right: 14px;
+    }
+    .contact-row .c-item + .c-item {
+      padding-left: 14px;
+      border-left: 1px solid rgba(255,255,255,0.2);
+    }
+    .contact-row a { color: #a8d8ff; text-decoration: none; }
+    .contact-row a:hover { text-decoration: underline; }
+    .c-icon { opacity: 0.7; font-style: normal; }
+
+    /* ── Body layout ── */
+    .body {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      align-items: stretch;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      background: #f0f4fb;
+      padding: 12px 12px;
+      border-right: 1px solid #dde3ef;
+      min-height: 100%;
+    }
+
+    /* ── Main ── */
+    .main {
+      padding: 12px 20px;
+    }
+
+    /* ── Section headings ── */
+    .section-title {
+      font-size: 8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: #0f3460;
+      border-bottom: 1.5px solid #0f3460;
+      padding-bottom: 2px;
+      margin-bottom: 7px;
+      margin-top: 12px;
+    }
+    .section-title:first-child { margin-top: 0; }
+
+    /* ── Skill blocks ── */
+    .skill-category { margin-bottom: 6px; }
+    .skill-category h4 {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: #0f3460;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+    .skill-tag {
+      display: inline-block;
+      background: #dde8f8;
+      color: #0f3460;
+      border-radius: 3px;
+      padding: 1px 6px;
+      font-size: 7.5pt;
+      margin: 1px 2px 1px 0;
+    }
+
+    /* ── Education block ── */
+    .edu-entry { margin-bottom: 8px; }
+    .edu-entry h4 { font-size: 9pt; font-weight: 700; color: #1a1a2e; }
+    .edu-entry .inst { font-size: 8.5pt; color: #444; margin-top: 1px; }
+    .edu-entry .meta { font-size: 8pt; color: #777; margin-top: 1px; }
+
+    /* ── Certifications ── */
+    .cert-placeholder {
+      border: 1.5px dashed #aab6c8;
+      border-radius: 4px;
+      padding: 8px;
+      color: #8899aa;
+      font-size: 7.5pt;
+      font-style: italic;
+      text-align: center;
+    }
+
+    /* ── Experience entries ── */
+    .job { margin-bottom: 11px; }
+    .job-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2px; }
+    .job-title { font-size: 9.5pt; font-weight: 700; color: #0f3460; }
+    .job-company { font-size: 8.5pt; font-weight: 600; color: #1a5276; }
+    .job-meta { font-size: 7.5pt; color: #777; white-space: nowrap; text-align: right; }
+    .job-meta .location { font-style: italic; }
+    .job-description { margin-top: 4px; }
+    .job-description ul { padding-left: 15px; }
+    .job-description li { margin-bottom: 2px; font-size: 8.5pt; }
+
+    /* ── Projects ── */
+    .project { margin-bottom: 9px; }
+    .project h4 { font-size: 9pt; font-weight: 700; color: #0f3460; margin-bottom: 2px; }
+    .project p { font-size: 8.5pt; color: #333; line-height: 1.45; }
+
+    /* ── Print styles ── */
+    @media print {
+      body { background: #fff; font-size: 8.5pt; line-height: 1.42; font-weight: 400; -webkit-font-smoothing: antialiased; }
+      p, li, div, span { font-weight: 400; }
+      .page { max-width: 100%; margin: 0; box-shadow: none; border-radius: 0; }
+      .print-tip { display: none; }
+      .section-title { color: #000; border-color: #000; margin-top: 10px; margin-bottom: 6px; }
+      .job-title, .job-company { color: #000; }
+      .job { margin-bottom: 9px; }
+      .job-description li { margin-bottom: 1px; }
+      .project { margin-bottom: 7px; }
+      .skill-tag { border: 1px solid #bbb; background: #f0f0f0; color: #000; font-weight: 400; }
+      .skill-category { margin-bottom: 5px; }
+      .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; padding: 14px 20px 11px; }
+      .header h1 { font-size: 18pt; }
+      .header-photo { width: 84px; height: 84px; }
+      .sidebar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .main { padding: 10px 18px; }
+      .sidebar { padding: 10px 11px; }
+      @page { size: A4 portrait; margin: 6mm 7mm; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ══ HEADER ══ -->
+    <div class="header">
+      <div class="header-inner">
+        <div class="header-left">
+          <h1>Akshay Gend</h1>
+          <div class="tagline">Software Developer</div>
+          <div class="contact-row">
+            <span class="c-item"><i class="c-icon">✉</i> akshaygend.10@gmail.com</span>
+            <span class="c-item"><i class="c-icon">✆</i> +91 7218530058</span>
+            <span class="c-item"><i class="c-icon">⌖</i> Pune, India</span>
+            <span class="c-item"><i class="c-icon">in</i> <a href="https://www.linkedin.com/in/akshaygend" target="_blank">LinkedIn</a></span>
+            <span class="c-item"><i class="c-icon">⌥</i> <a href="https://github.com/akshaygend" target="_blank">GitHub</a></span>
+            <span class="c-item"><i class="c-icon">🌐</i> <a href="https://YOUR_PORTFOLIO" target="_blank">Portfolio</a></span>
+          </div>
+        </div>
+        <div class="header-photo">
+          <img src="Images/106350_Akshay_Gend_MRI_Education.jpeg" alt="Akshay Gend" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ TWO-COLUMN BODY ══ -->
+    <div class="body">
+
+      <!-- ╔══ SIDEBAR ══╗ -->
+      <aside class="sidebar">
+
+        <!-- Skills -->
+        <div class="section-title">Technical Skills</div>
+
+        <div class="skill-category">
+          <h4>Languages</h4>
+          <span class="skill-tag">C#</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">HTML / CSS</span>
+        </div>
+
+        <div class="skill-category">
+          <h4>Frameworks</h4>
+          <span class="skill-tag">ASP.NET Core</span>
+          <span class="skill-tag">ASP.NET MVC</span>
+          <span class="skill-tag">ASP.NET Web API</span>
+          <span class="skill-tag">Entity Framework Core</span>
+          <span class="skill-tag">Angular</span>
+          <span class="skill-tag">WPF</span>
+        </div>
+
+        <div class="skill-category">
+          <h4>Cloud &amp; Azure</h4>
+          <span class="skill-tag">Azure Functions</span>
+          <span class="skill-tag">Azure Cosmos DB</span>
+          <span class="skill-tag">Azure Service Bus</span>
+          <span class="skill-tag">Azure Blob Storage</span>
+          <span class="skill-tag">Azure App Service</span>
+        </div>
+
+        <div class="skill-category">
+          <h4>Databases</h4>
+          <span class="skill-tag">MS SQL Server</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">Cosmos DB</span>
+          <span class="skill-tag">PL/SQL</span>
+          <span class="skill-tag">Stored Procedures</span>
+        </div>
+
+        <div class="skill-category">
+          <h4>Tools &amp; AI</h4>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">JIRA</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Visual Studio</span>
+          <span class="skill-tag">GitHub Copilot</span>
+          <span class="skill-tag">Azure OpenAI</span>
+          <span class="skill-tag">Crystal Reports</span>
+          <span class="skill-tag">CI/CD Pipelines</span>
+        </div>
+
+        <div class="skill-category">
+          <h4>Concepts</h4>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Microservices</span>
+          <span class="skill-tag">Agile / Scrum</span>
+          <span class="skill-tag">SOLID Principles</span>
+          <span class="skill-tag">Unit Testing</span>
+        </div>
+
+        <!-- Certifications & Awards -->
+        <div class="section-title">Certifications &amp; Awards</div>
+        <div style="display:flex; flex-direction:column; gap:5px;">
+          <div>
+            <div style="font-size:8pt; font-weight:600; color:#1a1a2e;">AZ-900: Azure Fundamentals</div>
+            <div style="font-size:7.5pt; color:#555;">Microsoft &middot; 2025</div>
+          </div>
+          <div>
+            <div style="font-size:8pt; font-weight:600; color:#1a1a2e;">AZ-204: Azure Developer</div>
+            <div style="font-size:7.5pt; color:#555;">Microsoft &middot; 2025</div>
+          </div>
+          <div>
+            <div style="font-size:8pt; font-weight:600; color:#1a1a2e;">ASP.NET MVC 5 – Ultimate Guide</div>
+            <div style="font-size:7.5pt; color:#555;">Udemy &middot; Jul 2025 &middot; <a href="https://www.udemy.com/certificate/UC-125b3c33-8350-472f-903d-a487b271caa5/" target="_blank" style="color:#1a5276; text-decoration:none;">View ↗</a></div>
+          </div>
+          <div>
+            <div style="font-size:8pt; font-weight:600; color:#1a1a2e;">🏆 Core Value Award</div>
+            <div style="font-size:7.5pt; color:#555;">MRI Software &middot; 2025</div>
+          </div>
+        </div>
+
+
+      </aside>
+
+      <!-- ╔══ MAIN CONTENT ══╗ -->
+      <main class="main">
+
+        <!-- Professional Summary -->
+        <div class="section-title">Professional Summary</div>
+        <p style="font-size:9pt; color:#333; margin-bottom:4px;">
+          Results-driven .NET Software Developer with 3+ years building enterprise web apps, cloud-native APIs, and scalable .NET solutions — from Azure Functions microservices to Angular frontends.
+        </p>
+
+        <!-- Experience -->
+        <div class="section-title">Work Experience</div>
+
+        <!-- Job 1: MRI Software -->
+        <div class="job">
+          <div class="job-header">
+            <div>
+              <div class="job-title">Software Engineer I</div>
+              <div class="job-company">MRI Software Pvt. Ltd.</div>
+            </div>
+            <div class="job-meta">
+              <div>Dec 2024 – Present</div>
+              <div class="location">Pune, India (Remote)</div>
+            </div>
+          </div>
+          <div class="job-description">
+            <ul>
+              <li>Architecting and delivering cloud-native REST APIs using Azure Functions (.NET 8) across Education domains, serving thousands of end users.</li>
+              <li>Modernising legacy WPF desktop modules and enterprise web platforms, improving maintainability and paving the way for cloud migration.</li>
+              <li>Working with Azure DevOps CI/CD pipelines for build, test, and deployment automation; using AI tools like GitHub Copilot to improve development productivity and code quality.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Job 2: Capita -->
+        <div class="job">
+          <div class="job-header">
+            <div>
+              <div class="job-title">Graduate Engineering Trainee</div>
+              <div class="job-company">Capita India Pvt. Ltd.</div>
+            </div>
+            <div class="job-meta">
+              <div>Sep 2023 – Dec 2024</div>
+              <div class="location">Pune, Maharashtra, India</div>
+            </div>
+          </div>
+          <div class="job-description">
+            <ul>
+              <li>Delivered full-stack features on the same enterprise product suite (later acquired by MRI Software), building ASP.NET MVC and Web API solutions with layered architecture and custom authentication.</li>
+              <li>Engineered and optimised stored procedures and data pipelines for statutory reporting, handling large-scale datasets with accuracy and performance.</li>
+              <li>Contributed to a cloud-readiness mindset through Agile practices, code reviews, and unit testing — building the foundation for scalable, maintainable systems.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Key Projects -->
+        <div class="section-title">Key Projects</div>
+
+        <div class="project">
+          <h4>OneCloudAPI &ndash; Education &amp; Statutory Returns <span style="font-weight:400; color:#666; font-size:8pt;">[MRI Software]</span></h4>
+          <p>Developed and maintained REST API endpoints using Azure Functions (.NET 8) and Entity Framework Core across Education modules. Implemented and tested Statutory Return generation workflows for SEN &amp; EY Termly Census as part of an Agile delivery team.</p>
+        </div>
+
+        <div class="project">
+          <h4>SmartCodingHubs &ndash; Full-Stack Web App <span style="font-weight:400; color:#666; font-size:8pt;">[Freelance]</span> <a href="https://smartcodinghubs.onrender.com/" target="_blank" style="font-size:8pt; font-weight:400; color:#1a5276; text-decoration:none; margin-left:6px;">&#127760; smartcodinghubs.onrender.com</a></h4>
+          <p>Designed and shipped a full-stack ASP.NET Core 8 MVC app with PostgreSQL, admin panel, email service, analytics, and Docker deployment on Render — solo, end-to-end.</p>
+        </div>
+
+        <div class="project">
+          <h4>EducationV4 &ndash; Enterprise Education Platform <span style="font-weight:400; color:#666; font-size:8pt;">[MRI Software]</span></h4>
+          <p>Maintained and extended a large-scale WPF &amp; ASP.NET enterprise product — bug fixes, feature delivery, regression testing, and NuGet package management across a multi-project solution.</p>
+        </div>
+
+        <!-- Education -->
+        <div class="section-title">Education</div>
+        <div class="edu-entry" style="display:flex; justify-content:space-between; align-items:flex-start;">
+          <div>
+            <h4>Bachelor of Engineering &ndash; Information Technology</h4>
+            <div class="inst">MET, Bhujabal Knowledge City, Nashik</div>
+          </div>
+          <div style="text-align:right; white-space:nowrap; font-size:8pt; color:#777;">
+            <div>Jun 2019 – Jun 2023</div>
+            <div>Grade: <strong>8.29 / 10</strong></div>
+          </div>
+        </div>
+        <div class="edu-entry" style="display:flex; justify-content:space-between; align-items:flex-start;">
+          <div>
+            <h4>Higher Secondary School &ndash; Science</h4>
+            <div class="inst">T.R. High School & Jr College, Dabhadi, Nashik</div>
+          </div>
+          <div style="text-align:right; white-space:nowrap; font-size:8pt; color:#777;">
+            <div>Jun 2017 – Mar 2019</div>
+            <div>Grade: <strong>63.84%</strong></div>
+          </div>
+        </div>
+
+    </div><!-- /.body -->
+
+  </div><!-- /.page -->
+</body>
+</html>

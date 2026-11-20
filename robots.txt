@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akshaygend.netlify.app/sitemap.xml

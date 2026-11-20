@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akshay Gend – .NET Developer</title>
+  <meta name="description" content="Akshay Gend – .NET Software Developer specialising in Azure, ASP.NET Core, and cloud-native APIs." />
+  <meta name="theme-color" content="#09090b" />
+  <link rel="canonical" href="https://akshaygend.netlify.app/" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a class="nav-logo" href="#home">
+        <span class="logo-badge">AG</span>
+        <span class="logo-name">Akshay<span class="logo-dot-sep">.</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="nav-links-cta"><a href="Akshay_Gend_Resume.html" target="_blank" rel="noopener">View Resume ↗</a></li>
+      </ul>
+      <a href="Akshay_Gend_Resume.html" target="_blank" rel="noopener" class="btn btn-sm nav-cta">View Resume ↗</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HOME : particle name -->
+  <section class="landing" id="home">
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+    <h1 class="sr-only">Akshay Gend – .NET Software Developer</h1>
+    <p class="landing-role">Software Developer · .NET &amp; Azure</p>
+    <p class="landing-hint">Hover and move cursor to disperse the particle field</p>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to about"><span></span></a>
+  </section>
+
+  <!-- ABOUT : split-screen bio -->
+  <section class="section hero" id="about">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Hello, I'm</p>
+        <h2 class="hero-name">Akshay<br><span class="outline">Gend</span></h2>
+        <div class="word-line">
+          <span class="word-amp">&amp; Innovative</span>
+          <span class="word-window" aria-live="off">
+            <span class="word-list" id="wordList">
+              <span>.NET Developer</span>
+              <span>Cloud Engineer</span>
+              <span>API Architect</span>
+              <span>Azure Builder</span>
+            </span>
+          </span>
+        </div>
+        <p class="hero-bio">
+          Results-driven .NET Software Developer with <strong>3+ years</strong> building
+          cloud-native APIs, enterprise web apps, and Azure microservices —
+          passionate about clean code that ships.
+        </p>
+        <div class="hero-socials">
+          <a href="https://wa.me/917218530058" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-btn social-wa">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.554 4.107 1.523 5.832L.057 23.625a.75.75 0 0 0 .918.918l5.8-1.466A11.934 11.934 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.716 9.716 0 0 1-4.953-1.355l-.355-.211-3.683.931.948-3.672-.23-.376A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/akshu_lonari" target="_blank" rel="noopener" aria-label="Instagram" class="social-btn social-ig">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/akshaygend" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-btn social-li">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://github.com/akshaygend" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn social-gh">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="mailto:akshaygend.10@gmail.com" aria-label="Email" class="social-btn social-em">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Let's Talk</a>
+          <a href="Akshay_Gend_Resume.html" target="_blank" rel="noopener" class="btn btn-outline">Download CV</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="photo-glow" aria-hidden="true"></div>
+        <div class="photo-frame">
+          <img src="Images/Image.jpg" alt="Akshay Gend" />
+        </div>
+        <div class="exp-badge"><strong>3+</strong><span>Years Exp.</span></div>
+        <span class="avail-tag"><i></i>Available for work</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-band" aria-hidden="true">
+    <div class="marquee-row marquee-left">
+      <div class="marquee-track">
+        <span>.NET 8</span><span>Azure</span><span>ASP.NET Core</span><span>C#</span><span>Angular</span><span>SQL Server</span><span>Docker</span><span>CI/CD</span>
+        <span>.NET 8</span><span>Azure</span><span>ASP.NET Core</span><span>C#</span><span>Angular</span><span>SQL Server</span><span>Docker</span><span>CI/CD</span>
+      </div>
+    </div>
+    <div class="marquee-row marquee-right">
+      <div class="marquee-track">
+        <span>REST APIs</span><span>Microservices</span><span>Azure Functions</span><span>Cosmos DB</span><span>Azure OpenAI</span><span>Unit Testing</span><span>Clean Architecture</span>
+        <span>REST APIs</span><span>Microservices</span><span>Azure Functions</span><span>Cosmos DB</span><span>Azure OpenAI</span><span>Unit Testing</span><span>Clean Architecture</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <section class="section" id="story">
+    <div class="container">
+      <p class="eyebrow reveal">01 — About me</p>
+      <h2 class="section-heading reveal">My <span class="outline">Story</span></h2>
+      <div class="story-grid">
+        <div class="story-photo reveal">
+          <div class="story-photo-inner">
+            <img src="Images/Image (2).jpg" alt="Akshay Gend" loading="lazy" />
+          </div>
+          <div class="story-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            <span>.NET Developer</span>
+          </div>
+        </div>
+        <div class="story-text reveal">
+          <p>
+            I didn't just learn to code — I got <strong>obsessed</strong> with it. What started as curiosity
+            about how apps work turned into a career building things that thousands of people rely on every day.
+            C# was my first real love, and three years later it still is.
+          </p>
+          <p>
+            At <strong>MRI Software</strong>, I work on cloud-native REST APIs powering the Education domain —
+            Azure Functions, Cosmos DB, Service Bus, the whole stack. I care deeply about
+            <strong>clean architecture</strong> and code that doesn't just work today but is still readable
+            six months later when someone else (or future-me) opens it at 11 PM.
+          </p>
+          <p>
+            Outside of work, I built <a href="https://smartcodinghubs.onrender.com/" target="_blank" rel="noopener">SmartCodingHubs</a>
+            — a platform for developers to learn and collaborate — because I believe the best way to
+            truly understand something is to build it from scratch. I also hold two Azure certifications
+            (AZ-900 &amp; AZ-204) and I'm always hunting for the next one.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number" data-count="3" data-suffix="+">3+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-count="10" data-suffix="+">10+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-count="2" data-suffix="">2</span>
+              <span class="stat-label">Azure Certifications</span>
+            </div>
+          </div>
+        </div>
+        <div class="info-card reveal">
+          <div class="info-item"><span class="info-label">Name</span><span class="info-value">Akshay Gend</span></div>
+          <div class="info-item"><span class="info-label">Role</span><span class="info-value">Software Engineer I</span></div>
+          <div class="info-item"><span class="info-label">Company</span><span class="info-value">MRI Software Pvt. Ltd.</span></div>
+          <div class="info-item"><span class="info-label">Location</span><span class="info-value">Pune, India</span></div>
+          <div class="info-item"><span class="info-label">Email</span><span class="info-value"><a href="mailto:akshaygend.10@gmail.com">akshaygend.10@gmail.com</a></span></div>
+          <div class="info-item"><span class="info-label">Phone</span><span class="info-value">+91 72185 30058</span></div>
+          <div class="info-item"><span class="info-label">Available</span><span class="info-value available-badge">Open to Opportunities</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <p class="eyebrow reveal">02 — Toolbox</p>
+      <h2 class="section-heading reveal">Technical <span class="outline">Skills</span></h2>
+      <div class="skills-grid">
+
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">⚙️</div>
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span class="tag">C#</span><span class="tag">SQL</span><span class="tag">JavaScript</span>
+            <span class="tag">TypeScript</span><span class="tag">HTML / CSS</span><span class="tag">PL/SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">🔧</div>
+          <h3>Frameworks</h3>
+          <div class="skill-tags">
+            <span class="tag">ASP.NET Core</span><span class="tag">ASP.NET MVC</span><span class="tag">ASP.NET Web API</span>
+            <span class="tag">Entity Framework Core</span><span class="tag">Angular</span><span class="tag">WPF</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">☁️</div>
+          <h3>Cloud &amp; Azure</h3>
+          <div class="skill-tags">
+            <span class="tag tag-azure">Azure Functions</span><span class="tag tag-azure">Azure Cosmos DB</span>
+            <span class="tag tag-azure">Azure Service Bus</span><span class="tag tag-azure">Azure Blob Storage</span>
+            <span class="tag tag-azure">Azure App Service</span><span class="tag tag-azure">Azure DevOps</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">🗄️</div>
+          <h3>Databases</h3>
+          <div class="skill-tags">
+            <span class="tag">MS SQL Server</span><span class="tag">PostgreSQL</span>
+            <span class="tag">Cosmos DB</span><span class="tag">Stored Procedures</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">🛠️</div>
+          <h3>Tools &amp; AI</h3>
+          <div class="skill-tags">
+            <span class="tag">Git</span><span class="tag">Docker</span><span class="tag">JIRA</span>
+            <span class="tag">Visual Studio</span><span class="tag">GitHub Copilot</span><span class="tag">Azure OpenAI</span>
+            <span class="tag">CI/CD Pipelines</span><span class="tag">Crystal Reports</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">💡</div>
+          <h3>Concepts</h3>
+          <div class="skill-tags">
+            <span class="tag">REST APIs</span><span class="tag">Microservices</span><span class="tag">Agile / Scrum</span>
+            <span class="tag">SOLID Principles</span><span class="tag">Unit Testing</span><span class="tag">Clean Architecture</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <p class="eyebrow reveal">03 — Journey</p>
+      <h2 class="section-heading reveal">Work <span class="outline">Experience</span></h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Software Engineer I</h3>
+                <div class="timeline-company">MRI Software Pvt. Ltd.</div>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-date">Dec 2024 – Present</span>
+                <span class="timeline-loc">Pune, India · Remote</span>
+              </div>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Architecting and delivering cloud-native REST APIs using <strong>Azure Functions (.NET 8)</strong> across Education domains, serving thousands of end users.</li>
+              <li>Modernising legacy <strong>WPF</strong> desktop modules and enterprise web platforms, improving maintainability and paving the way for cloud migration.</li>
+              <li>Working with <strong>Azure DevOps CI/CD pipelines</strong> for build, test, and deployment automation; leveraging <strong>GitHub Copilot</strong> to improve development productivity and code quality.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag tag-sm">Azure Functions</span><span class="tag tag-sm">.NET 8</span>
+              <span class="tag tag-sm">WPF</span><span class="tag tag-sm">CI/CD</span><span class="tag tag-sm">GitHub Copilot</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Graduate Engineering Trainee</h3>
+                <div class="timeline-company">Capita India Pvt. Ltd.</div>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-date">Sep 2023 – Dec 2024</span>
+                <span class="timeline-loc">Pune, Maharashtra, India</span>
+              </div>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Delivered full-stack features on the same enterprise product suite (later acquired by MRI Software), building <strong>ASP.NET MVC</strong> and <strong>Web API</strong> solutions with layered architecture and custom authentication.</li>
+              <li>Engineered and optimised <strong>stored procedures</strong> and data pipelines for statutory reporting, handling large-scale datasets with accuracy and performance.</li>
+              <li>Contributed to Agile practices, code reviews, and unit testing — building the foundation for scalable, maintainable systems.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag tag-sm">ASP.NET MVC</span><span class="tag tag-sm">Web API</span>
+              <span class="tag tag-sm">SQL Server</span><span class="tag tag-sm">Agile</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS : pinned horizontal scroll -->
+  <section class="hscroll" id="projects">
+    <div class="hscroll-sticky">
+      <div class="hscroll-bg-text" aria-hidden="true">PROJECTS</div>
+      <div class="hscroll-head">
+        <div>
+          <p class="eyebrow">04 — Selected work</p>
+          <h2 class="section-heading">Key <span class="outline">Projects</span></h2>
+        </div>
+        <div class="hscroll-arrows">
+          <button type="button" class="arrow-btn" id="projPrev" aria-label="Previous project">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+          </button>
+          <button type="button" class="arrow-btn" id="projNext" aria-label="Next project">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="hscroll-track" id="hscrollTrack">
+
+        <article class="project-card">
+          <div class="project-media project-media--a"><span>01</span><div class="project-icon">☁️</div></div>
+          <div class="project-body">
+            <div class="project-meta"><span class="project-cat">Professional</span><span class="project-badge">MRI Software</span></div>
+            <h3>OneCloudAPI</h3>
+            <p class="project-sub">Education &amp; Statutory Returns</p>
+            <p class="project-desc">
+              Developed and maintained REST API endpoints using <strong>Azure Functions (.NET 8)</strong> and
+              Entity Framework Core across Education modules. Implemented and tested Statutory Return
+              generation workflows for SEN &amp; EY Termly Census as part of an Agile delivery team.
+            </p>
+            <div class="project-stack">
+              <span class="tag tag-sm">Azure Functions</span><span class="tag tag-sm">.NET 8</span>
+              <span class="tag tag-sm">EF Core</span><span class="tag tag-sm">REST API</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media project-media--b"><span>02</span><div class="project-icon">🌐</div></div>
+          <div class="project-body">
+            <div class="project-meta"><span class="project-cat">Freelance</span><span class="project-badge">Full-Stack</span></div>
+            <h3>SmartCodingHubs</h3>
+            <p class="project-sub">Full-Stack Web Application</p>
+            <p class="project-desc">
+              Designed and shipped a full-stack <strong>ASP.NET Core 8 MVC</strong> app with PostgreSQL,
+              admin panel, email service, analytics, and <strong>Docker</strong> deployment on Render —
+              solo, end-to-end.
+            </p>
+            <div class="project-stack">
+              <span class="tag tag-sm">ASP.NET Core 8</span><span class="tag tag-sm">PostgreSQL</span>
+              <span class="tag tag-sm">Docker</span><span class="tag tag-sm">MVC</span>
+            </div>
+            <a href="https://smartcodinghubs.onrender.com/" target="_blank" rel="noopener" class="project-link">
+              Launch Project
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media project-media--d"><span>03</span><div class="project-icon">✍️</div></div>
+          <div class="project-body">
+            <div class="project-meta"><span class="project-cat">Freelance</span><span class="project-badge">2026</span></div>
+            <h3>Signature Verification System</h3>
+            <p class="project-sub">Python Application · Freelance</p>
+            <p class="project-desc">
+              Built a <strong>Python</strong>-based system that verifies signatures by comparing them against
+              stored samples to tell genuine ones from forged — delivered end-to-end as a freelance project.
+            </p>
+            <div class="project-stack">
+              <span class="tag tag-sm">Python</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media project-media--c"><span>04</span><div class="project-icon">🏢</div></div>
+          <div class="project-body">
+            <div class="project-meta"><span class="project-cat">Professional</span><span class="project-badge">MRI Software</span></div>
+            <h3>EducationV4</h3>
+            <p class="project-sub">Enterprise Education Platform</p>
+            <p class="project-desc">
+              Maintained and extended a large-scale <strong>WPF &amp; ASP.NET</strong> enterprise product —
+              bug fixes, feature delivery, regression testing, and NuGet package management across a
+              multi-project solution.
+            </p>
+            <div class="project-stack">
+              <span class="tag tag-sm">WPF</span><span class="tag tag-sm">ASP.NET</span>
+              <span class="tag tag-sm">NuGet</span><span class="tag tag-sm">C#</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card project-card--cta">
+          <p class="project-cat">Next up</p>
+          <h3>Have an idea?<br>Let's build it.</h3>
+          <a href="#contact" class="btn btn-primary">Get in touch</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <p class="eyebrow reveal">05 — Credentials</p>
+      <h2 class="section-heading reveal">Certifications <span class="outline">&amp; Awards</span></h2>
+      <div class="certs-grid">
+
+        <div class="cert-card reveal">
+          <div class="cert-badge">AZ-900</div>
+          <div class="cert-info"><h4>Azure Fundamentals</h4><p>Microsoft · 2025</p></div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-badge">AZ-204</div>
+          <div class="cert-info"><h4>Azure Developer Associate</h4><p>Microsoft · 2025</p></div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-badge">CERT</div>
+          <div class="cert-info">
+            <h4>ASP.NET MVC 5 – Ultimate Guide</h4>
+            <p>Udemy · Jul 2025 · <a href="https://www.udemy.com/certificate/UC-125b3c33-8350-472f-903d-a487b271caa5/" target="_blank" rel="noopener">View ↗</a></p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-badge cert-badge--award">🏆</div>
+          <div class="cert-info"><h4>Core Value Award</h4><p>MRI Software · 2025</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <p class="eyebrow reveal">06 — Learning</p>
+      <h2 class="section-heading reveal"><span class="outline">Education</span></h2>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-info">
+            <h3>Bachelor of Engineering – Information Technology</h3>
+            <p class="edu-inst">MET, Bhujabal Knowledge City, Nashik</p>
+            <div class="edu-meta"><span>Jun 2019 – Jun 2023</span><span class="edu-grade">CGPA: 8.29 / 10</span></div>
+          </div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-icon">📚</div>
+          <div class="edu-info">
+            <h3>Higher Secondary School – Science</h3>
+            <p class="edu-inst">T.R. High School &amp; Jr College, Dabhadi, Nashik</p>
+            <div class="edu-meta"><span>Jun 2017 – Mar 2019</span><span class="edu-grade">63.84%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <p class="eyebrow reveal">07 — Connect</p>
+      <h2 class="section-heading reveal">Let's <span class="outline">Talk</span></h2>
+      <p class="contact-sub reveal">
+        Have a project in mind, want to build something great together, or just say hello?
+        My inbox is always open.
+      </p>
+      <div class="contact-grid">
+        <div class="contact-cards reveal">
+          <a href="mailto:akshaygend.10@gmail.com" class="contact-card">
+            <span class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+            <div><div class="contact-card-label">Direct Mail</div><div class="contact-card-value">akshaygend.10@gmail.com</div></div>
+          </a>
+          <a href="tel:+917218530058" class="contact-card">
+            <span class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <div><div class="contact-card-label">Phone</div><div class="contact-card-value">+91 72185 30058</div></div>
+          </a>
+          <a href="https://wa.me/917218530058" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></span>
+            <div><div class="contact-card-label">WhatsApp</div><div class="contact-card-value">+91 72185 30058 ↗</div></div>
+          </a>
+          <a href="https://www.linkedin.com/in/akshaygend" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+            <div><div class="contact-card-label">LinkedIn</div><div class="contact-card-value">Connect with me ↗</div></div>
+          </a>
+          <a href="https://github.com/akshaygend" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
+            <div><div class="contact-card-label">GitHub</div><div class="contact-card-value">View my code ↗</div></div>
+          </a>
+          <a href="https://www.instagram.com/akshu_lonari" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+            <div><div class="contact-card-label">Instagram</div><div class="contact-card-value">@akshu_lonari ↗</div></div>
+          </a>
+        </div>
+        <div class="contact-form-wrap reveal">
+          <div class="form-head">
+            <h3>Send Message</h3>
+            <span>Direct WhatsApp</span>
+          </div>
+          <p class="form-sub">Your message opens directly in WhatsApp so we can talk in real time.</p>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your project or message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+              Send Message via WhatsApp
+            </button>
+          </form>
+          <p class="form-note"><i></i>Available for freelance &amp; full-time roles</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="marquee-band marquee-band--footer" aria-hidden="true">
+      <div class="marquee-row marquee-left">
+        <div class="marquee-track marquee-track--big">
+          <span>AKSHAY</span><span>GEND</span><span>.NET</span><span>AZURE</span>
+          <span>AKSHAY</span><span>GEND</span><span>.NET</span><span>AZURE</span>
+        </div>
+      </div>
+      <div class="marquee-row marquee-right">
+        <div class="marquee-track marquee-track--big marquee-track--outline">
+          <span>CLOUD</span><span>APIS</span><span>MICROSERVICES</span><span>C#</span>
+          <span>CLOUD</span><span>APIS</span><span>MICROSERVICES</span><span>C#</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a class="nav-logo" href="#home">
+          <span class="logo-badge">AG</span>
+          <span class="logo-name">Akshay<span class="logo-dot-sep">.</span></span>
+        </a>
+        <p class="footer-tagline">Crafting scalable cloud-native experiences.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="Akshay_Gend_Resume.html" target="_blank" rel="noopener">Resume ↗</a>
+      </nav>
+      <a href="https://www.linkedin.com/in/akshaygend" target="_blank" rel="noopener" class="btn btn-linkedin">Follow Me</a>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 <strong>AKSHAY GEND</strong>. All rights reserved.</p>
+        <p class="footer-tech">HTML · CSS · Vanilla JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
